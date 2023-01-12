@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClassroomManagement.web.Migrations
 {
     [DbContext(typeof(DbObject))]
-    [Migration("20230107115345_Round3")]
-    partial class Round3
+    [Migration("20230112100014_Done")]
+    partial class Done
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

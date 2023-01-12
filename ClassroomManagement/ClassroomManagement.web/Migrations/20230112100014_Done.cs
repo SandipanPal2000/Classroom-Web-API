@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClassroomManagement.web.Migrations
 {
-    public partial class Round3 : Migration
+    public partial class Done : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

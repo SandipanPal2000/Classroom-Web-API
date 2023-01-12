@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dot Net\\Projects\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj": {}
+    "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj": {}
   },
   "projects": {
-    "D:\\Dot Net\\Projects\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj": {
+    "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dot Net\\Projects\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
+        "projectUniqueName": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
         "projectName": "ClassroomManagement.web",
-        "projectPath": "D:\\Dot Net\\Projects\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
+        "projectPath": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
         "packagesPath": "C:\\Users\\sandi\\.nuget\\packages\\",
-        "outputPath": "D:\\Dot Net\\Projects\\ClassroomManagement\\ClassroomManagement.web\\obj\\",
+        "outputPath": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sandi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
