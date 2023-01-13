@@ -1,0 +1,20 @@
+=============Error Logging ===========
+===========Start============= 13-01-2023 01:33:23 PM
+Error Message: User already exists
+===========End============= 13-01-2023 01:33:23 PM
+=============Error Logging ===========
+===========Start============= 13-01-2023 01:41:08 PM
+Error Message: Student not found
+===========End============= 13-01-2023 01:41:08 PM
+=============Error Logging ===========
+===========Start============= 13-01-2023 01:41:25 PM
+Error Message: Student not found
+===========End============= 13-01-2023 01:41:25 PM
+=============Error Logging ===========
+===========Start============= 13-01-2023 01:43:46 PM
+Error Message: User already exists
+===========End============= 13-01-2023 01:43:46 PM
+=============Error Logging ===========
+===========Start============= 13-01-2023 02:14:41 PM
+Error Message: Email not found! Email = user@example.com is not present in Database
+===========End============= 13-01-2023 02:14:41 PM
