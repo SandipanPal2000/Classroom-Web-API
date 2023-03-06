@@ -50,7 +50,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 //Add AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AngularClient",
+                        policy =>
+                        {
+                            policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+                        }
+        );
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,7 +67,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AngularClient");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

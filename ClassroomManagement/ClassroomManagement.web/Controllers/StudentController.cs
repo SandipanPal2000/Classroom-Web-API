@@ -11,6 +11,7 @@ namespace ClassroomManagement.web.Controllers
     /// Controller to create, get, edit and delete data in/from the database
     /// </summary>
     [Route("api/[controller]")]
+    [AllowAnonymous]
     [ApiController]
     public class StudentController : ControllerBase
     {
