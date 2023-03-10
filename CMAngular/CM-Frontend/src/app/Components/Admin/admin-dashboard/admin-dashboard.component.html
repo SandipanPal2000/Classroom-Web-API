@@ -1,1 +1,79 @@
-<p>admin-dashboard works!</p>
+<div *ngIf="this.crud.showPopup">
+  <app-add-edit></app-add-edit>
+</div>
+<div class="col">
+  <!-- <button
+    type="button"
+    (click)="toggleAttendenceListButton()"
+    class="btn btn-primary p-2 m-2"
+  >
+    Show Attandance
+  </button> -->
+
+  <button
+    type="button"
+    (click)="showPopupButton()"
+    class="btn btn-primary p-2 m-2"
+  >
+    ADD A Student
+  </button>
+  <br />
+  <button
+    type="button"
+    (click)="toggleStudentListButton()"
+    class="btn btn-primary p-2 m-2"
+  >
+    Show Students ▼
+  </button>
+</div>
+
+<div *ngIf="toggleStudentList" class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col" style="direction: ltr; text-align: center">
+          StudentId
+        </th>
+        <th scope="col" style="direction: ltr; text-align: center">Name</th>
+        <th scope="col" style="direction: ltr; text-align: center">
+          Department
+        </th>
+        <th scope="col" style="direction: ltr; text-align: center">Score</th>
+        <th scope="col" style="direction: ltr; text-align: center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of crud.list">
+        <td style="direction: ltr; text-align: center">
+          {{ student.studentRoll }}
+        </td>
+        <td style="direction: ltr; text-align: center">
+          {{ student.studentName }}
+        </td>
+        <td style="direction: ltr; text-align: center">
+          {{ student.department }}
+        </td>
+        <td style="direction: ltr; text-align: center">
+          {{ student.score }}
+        </td>
+        <td style="direction: ltr; text-align: center">
+          <button
+            type="button"
+            (click)="callEditStudent(student.studentId)"
+            class="btn btn-primary p-2 m-2"
+          >
+            Edit
+          </button>
+
+          <button
+            type="button"
+            (click)="callDeleteStudent(student.studentId)"
+            class="btn btn-danger p-2 m-2"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

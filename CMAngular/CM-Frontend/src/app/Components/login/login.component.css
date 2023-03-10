@@ -2,6 +2,12 @@ html,
 body {
   height: 100%;
 }
+form{
+  border:2px solid blue;
+  border-radius: 20px;
+  padding:40px;
+  width: 25rem;
+}
 
 body {
   display: flex;
@@ -37,4 +43,8 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.register{
+cursor: pointer;
+color: blue;
 }

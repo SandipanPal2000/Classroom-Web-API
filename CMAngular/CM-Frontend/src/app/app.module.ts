@@ -13,7 +13,11 @@ import { CookieService } from 'ngx-cookie-service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthService } from './Services/auth.service';
+import { UserService } from './Services/user.service';
+import { CrudService } from './Services/crud.service';
+import { TokenInterceptor } from './Interceptor/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,17 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [CookieService],
+  providers: [
+    CookieService,
+    AuthService,
+    UserService,
+    CrudService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

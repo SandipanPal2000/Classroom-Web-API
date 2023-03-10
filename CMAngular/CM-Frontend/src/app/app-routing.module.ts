@@ -4,22 +4,25 @@ import { AdminDashboardComponent } from './Components/Admin/admin-dashboard/admi
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { AuthGuard } from './Guards/auth.guard';
+import { AdminGuard } from './Guards/admin.guard';
+import { AuthDeactiveGuard } from './Guards/auth-deactive.guard';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'dashboard', pathMatch: 'full'
+    path: '', redirectTo: 'dashbord', pathMatch: 'full'
   },
   {
-    path: 'dashbaord', component: DashboardComponent
+    path: 'dashbord', component: DashboardComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginComponent, canActivate: [AuthDeactiveGuard]
   },
   {
-    path: 'register', component: RegisterComponent
+    path: 'register', component: RegisterComponent, canActivate: [AuthDeactiveGuard]
   },
   {
-    path: 'admin', component: AdminDashboardComponent
+    path: 'admin', component: AdminDashboardComponent, canActivate: [AuthGuard, AdminGuard]
   }
 ];
 
