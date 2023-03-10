@@ -7,9 +7,9 @@ namespace ClassroomManagement.web.Services
     {
         Task<ServiceResponse<List<GetStudentDTO>>> FetchStudentsList();
         Task<ServiceResponse<GetStudentDTO>> FetchSingleStudent(int Id);
-        Task<string> AddStudent(CreateStudentDTO _newStudent);
-        Task<string> UpdateStudent(UpdateStudentDTO _student);
-        Task<string> DeleteStudent(int Id);
-        Task<string> UpdateScore(int Id, int Score);
+        Task AddStudent(CreateStudentDTO _newStudent);
+        Task UpdateStudent(UpdateStudentDTO _student);
+        Task DeleteStudent(int Id);
+        Task UpdateScore(int Id, int Score);
     }
 }

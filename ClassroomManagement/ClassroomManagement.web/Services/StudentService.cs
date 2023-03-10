@@ -16,26 +16,26 @@ namespace ClassroomManagement.web.Services
             _dbObject = dbObject;
             _mapper = mapper;
         }
-        public async Task<string> AddStudent(CreateStudentDTO _newStudent)
+        public async Task AddStudent(CreateStudentDTO _newStudent)
         {
             _dbObject.StudentTB.Add(_mapper.Map<StudentInfo>(_newStudent));
             await _dbObject.SaveChangesAsync();
-            return "Added student sucessfully";
+            
         }
 
-        public async Task<string> DeleteStudent(int Id)
+        public async Task DeleteStudent(int Id)
         {
             var result = _dbObject.StudentTB.FirstOrDefault(s => s.StudentId== Id);
             if (result == null)
             {
                 new Error("Student not found");
-                return "Studnet not found";
+                
             }
             else
             {
                 _dbObject.StudentTB.Remove(result);
                 await _dbObject.SaveChangesAsync();
-                return "Successfully deleted Student with ID = " + Id;
+                
             }
         }
 
@@ -75,37 +75,38 @@ namespace ClassroomManagement.web.Services
             return response;
         }
 
-        public async Task<string> UpdateScore(int Id, int Score)
+        public async Task UpdateScore(int Id, int Score)
         {
             var result = _dbObject.StudentTB.First(s => s.StudentId==Id);
             if (result == null)
             {
                 new Error("Student not found");
-                return "Student not found";
+                
             }
             else
             {
                 result.Score = Score;
                 await _dbObject.SaveChangesAsync();
-                return "Score modified for id= " + Id;
+        
             }
         }
 
-        public async Task<string> UpdateStudent(UpdateStudentDTO _student)
+        public async Task UpdateStudent(UpdateStudentDTO _student)
         {
             var result = _dbObject.StudentTB.First(s => s.StudentId == _student.StudentId);
             if (result == null)
             {
                 new Error("Student not found");
-                return "Studnet not found";
+                
             }
             else
             {
                 result.Score = _student.Score;
                 result.StudentName = _student.StudentName;
                 result.Department = _student.Department;
+                result.StudentRoll  = _student.StudentRoll;
                 await _dbObject.SaveChangesAsync();
-                return _student.StudentId + " Modified";
+           
             }
         }
     }

@@ -14,5 +14,7 @@ namespace ClassroomManagement.web.DTOs.Student
         [Required]
         [Range(0,100)]
         public int Score { get; set; }
+        [Required]
+        public string StudentRoll { get;  set; }=string.Empty;
     }
 }

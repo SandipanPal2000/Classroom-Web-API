@@ -41,6 +41,10 @@ namespace ClassroomManagement.web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("StudentRoll")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("StudentId");
 
                     b.ToTable("StudentTB");

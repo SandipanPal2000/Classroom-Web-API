@@ -2494,19 +2494,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sandi\\.nuget\\packages\\": {}
+    "C:\\Users\\Ryiu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
+      "projectUniqueName": "C:\\Users\\Ryiu\\Downloads\\Sandipan Project\\Classroom-Web-API\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
       "projectName": "ClassroomManagement.web",
-      "projectPath": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
-      "packagesPath": "C:\\Users\\sandi\\.nuget\\packages\\",
-      "outputPath": "D:\\Dot Net\\API Project\\ClassroomManagement\\ClassroomManagement.web\\obj\\",
+      "projectPath": "C:\\Users\\Ryiu\\Downloads\\Sandipan Project\\Classroom-Web-API\\ClassroomManagement\\ClassroomManagement.web\\ClassroomManagement.web.csproj",
+      "packagesPath": "C:\\Users\\Ryiu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ryiu\\Downloads\\Sandipan Project\\Classroom-Web-API\\ClassroomManagement\\ClassroomManagement.web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sandi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ryiu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2582,7 +2582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

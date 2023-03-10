@@ -14,7 +14,7 @@
         }
         public static void ErrorLogging(Exception ex)
         {
-            string strPath = @"D:\Dot Net\API Project\ClassroomManagement\LogFile.txt";
+            string strPath = @"C:\Users\Ryiu\Downloads\Sandipan Project\Classroom-Web-API\ClassroomManagement\LogFile";
             if (!File.Exists(strPath))
             {
                 File.Create(strPath).Dispose();
@@ -31,7 +31,7 @@
         }
         public static void ErrorLogging(String ex)
         {
-            string strPath = @"D:\Dot Net\API Project\ClassroomManagement\LogFile.txt";
+            string strPath = @"C:\Users\Ryiu\Downloads\Sandipan Project\Classroom-Web-API\ClassroomManagement\LogFile";
             if (!File.Exists(strPath))
             {
                 File.Create(strPath).Dispose();

@@ -11,7 +11,7 @@ namespace ClassroomManagement.web.Controllers
     /// Controller to create, get, edit and delete data in/from the database
     /// </summary>
     [Route("api/[controller]")]
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -26,9 +26,10 @@ namespace ClassroomManagement.web.Controllers
         /// </summary>
         [Authorize(Roles = "Teacher")]
         [HttpPost("AddStudent")]
-        public async Task<string> PostStudent(CreateStudentDTO _newStudnet)
+        public async Task<ActionResult> PostStudent(CreateStudentDTO _newStudnet)
         {
-            return await _iStudentService.AddStudent(_newStudnet);
+            await _iStudentService.AddStudent(_newStudnet);
+            return Ok(_newStudnet);
         }
         /// <summary>
         /// Tab to get details of all students
@@ -53,27 +54,31 @@ namespace ClassroomManagement.web.Controllers
         /// </summary>
         [Authorize(Roles = "Teacher")]
         [HttpPut("EditStudent")]
-        public async Task<string> PutStudent(UpdateStudentDTO _student)
+        public async Task<ActionResult> PutStudent(UpdateStudentDTO _student)
         {
-            return await _iStudentService.UpdateStudent(_student);
+             await _iStudentService.UpdateStudent(_student);
+            return Ok(_student);
         }
         /// <summary>
         /// Tab to edit score of student
         /// </summary>
         [Authorize(Roles = "Teacher")]
         [HttpPut("EditScore")]
-        public async Task<string> PutStudnetScore(int Id, int Score)
+        public async Task<ActionResult> PutStudnetScore(int Id, int Score)
         {
-            return await _iStudentService.UpdateScore(Id, Score);
+             
+            await _iStudentService.UpdateScore(Id, Score);
+            return Ok();
         }
         /// <summary>
         /// Tab to delete details of student
         /// </summary>
         [Authorize(Roles = "Teacher")]
         [HttpDelete("DeleteStudent")]
-        public async Task<string> DeleteStudent(int Id)
+        public async Task<ActionResult> DeleteStudent(int Id)
         {
-            return await _iStudentService.DeleteStudent(Id);
+           await _iStudentService.DeleteStudent(Id);
+            return Ok();
         }
     }
 }

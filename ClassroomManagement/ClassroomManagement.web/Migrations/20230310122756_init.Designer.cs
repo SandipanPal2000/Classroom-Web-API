@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClassroomManagement.web.Migrations
 {
     [DbContext(typeof(DbObject))]
-    [Migration("20230112100014_Done")]
-    partial class Done
+    [Migration("20230310122756_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,10 @@ namespace ClassroomManagement.web.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("StudentName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StudentRoll")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
