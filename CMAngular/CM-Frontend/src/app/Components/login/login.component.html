@@ -1,0 +1,32 @@
+<main class="form-signin">
+  <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+    <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+    <div class="form-floating">
+      <input
+        formControlName="Email"
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <br />
+    <div class="form-floating">
+      <input
+        formControlName="Password"
+        [type]="hide ? 'password' : 'text'"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
+    <br />
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
+    <p class="mt-5 mb-3 text-muted">
+      Don't have an account?
+      <u class="register" (click)="GotoRegisterButton()">Register</u>
+    </p>
+  </form>
+</main>

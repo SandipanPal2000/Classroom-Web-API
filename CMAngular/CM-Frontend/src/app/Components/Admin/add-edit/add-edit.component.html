@@ -1,0 +1,75 @@
+<div
+  style="
+    min-height: calc(100vh - 7rem);
+    min-width: 100vw;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px);
+  "
+>
+  <main class="form-signin">
+    <form [formGroup]="addEditForm" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 fw-normal text-white text-center">
+        {{ inputButton }} FORM
+      </h1>
+      <div class="form-floating">
+        <input
+          formControlName="studentName"
+          type="text"
+          class="form-control"
+          placeholder="John doe"
+        />
+        <label for="floatingInput">Name</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          formControlName="studentRoll"
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Eg0001"
+        />
+        <label for="floatingInput">Student Roll</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          formControlName="department"
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="CSE"
+        />
+        <label for="floatingInput">Department</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          formControlName="score"
+          type="number"
+          class="form-control"
+          id="floatingInput"
+          placeholder="100"
+        />
+        <label for="floatingPassword">score</label>
+      </div>
+      <br />
+      <div class="row">
+        <button class="w-100 btn btn-lg btn-success m-2 p-2 col" type="submit">
+          {{ inputButton }}
+        </button>
+        <button
+          class="w-100 btn btn-lg btn-danger m-2 p-2 col"
+          (click)="closePopup()"
+        >
+          Close
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
