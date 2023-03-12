@@ -24,6 +24,8 @@
           placeholder="John doe"
         />
         <label for="floatingInput">Name</label>
+        <div *ngIf="addEditForm.controls['studentName'].dirty && addEditForm.hasError('required' ,'studentName')">Name required</div>
+        <div *ngIf="addEditForm.hasError('pattern' ,'studentName')">Please provide a valid name</div>
       </div>
       <br />
       <div class="form-floating">
@@ -31,7 +33,6 @@
           formControlName="studentRoll"
           type="text"
           class="form-control"
-          id="floatingInput"
           placeholder="Eg0001"
         />
         <label for="floatingInput">Student Roll</label>
@@ -42,7 +43,6 @@
           formControlName="department"
           type="text"
           class="form-control"
-          id="floatingInput"
           placeholder="CSE"
         />
         <label for="floatingInput">Department</label>
@@ -53,7 +53,6 @@
           formControlName="score"
           type="number"
           class="form-control"
-          id="floatingInput"
           placeholder="100"
         />
         <label for="floatingPassword">score</label>

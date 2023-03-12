@@ -10,6 +10,8 @@
         placeholder="name@example.com"
       />
       <label for="floatingInput">Email address</label>
+      <div *ngIf="loginForm.controls['Email'].dirty && loginForm.hasError('required' ,'Email')">Email required</div>
+      <div *ngIf="loginForm.hasError('pattern' ,'Email')">Please provide a valid email</div>
     </div>
     <br />
     <div class="form-floating">
@@ -21,6 +23,7 @@
         placeholder="Password"
       />
       <label for="floatingPassword">Password</label>
+      <div *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required' ,'Password')">Password required</div>
     </div>
     <br />
     <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>

@@ -9,6 +9,8 @@
         placeholder="John doe"
       />
       <label for="floatingInput">Name</label>
+      <div *ngIf="registerForm.controls['name'].dirty && registerForm.hasError('required' ,'name')">Name required</div>
+      <div *ngIf="registerForm.hasError('pattern' ,'name')">Please provide a valid name</div>
     </div>
     <br />
     <div class="form-floating">
@@ -20,6 +22,8 @@
         placeholder="name@example.com"
       />
       <label for="floatingInput">Email address</label>
+      <div *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required' ,'email')">Email required</div>
+      <div *ngIf="registerForm.hasError('pattern' ,'email')">Please provide a valid email</div>
     </div>
     <br />
     <div class="form-floating">
@@ -31,6 +35,7 @@
         placeholder="Password"
       />
       <label for="floatingPassword">Password</label>
+      <div *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required' ,'password')">Password required</div>
     </div>
     <br />
     <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
